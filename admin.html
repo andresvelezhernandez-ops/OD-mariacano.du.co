@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil administrativo | Olimpiadas Deportivas</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <main class="page">
+
+    <header class="topbar">
+      <div>
+        <h1 class="title">Perfil administrativo</h1>
+        <div class="title__line"></div>
+        <p class="subtitle">Acceso condicionado por rango</p>
+      </div>
+      <div class="topbar__actions">
+        <a href="index.html" class="btn">Inicio</a>
+        <a href="#" class="btn">Posiciones</a>
+        <a href="#" class="btn">Estudiante</a>
+        <a href="#" class="btn">Profesor</a>
+      </div>
+    </header>
+
+    <div class="table-wrap">
+      <table class="table">
+        <thead>
+          <tr><th>Rango</th><th>Acceso</th><th>Funciones</th></tr>
+        </thead>
+        <tbody>
+          <tr data-rango="administrador"><td>Administrador</td><td>Total</td><td>Usuarios • torneos • reportes</td></tr>
+          <tr data-rango="coordinador"><td>Coordinador</td><td>Gestión</td><td>Torneos • posiciones • equipos</td></tr>
+          <tr data-rango="directivo"><td>Directivo</td><td>Consulta</td><td>Dashboard • reportes</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <section class="rule">
+      <h2 class="rule__title">Regla de acceso</h2>
+      <p class="rule__text">El sistema identifica el rol y muestra únicamente las funciones permitidas para su rango administrativo.</p>
+    </section>
+
+    <div class="ranks">
+      <button class="btn btn--lg" data-rango="administrador">Administrador →</button>
+      <button class="btn btn--lg" data-rango="coordinador">Coordinador →</button>
+      <button class="btn btn--lg" data-rango="directivo">Directivo →</button>
+    </div>
+
+    <div class="bottom">
+      <a href="index.html" class="back">← Inicio</a>
+      <footer class="footer">OD Colegio &nbsp;•&nbsp; Página 6</footer>
+    </div>
+  </main>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión | Olimpiadas Deportivas</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body class="login-page">
+  <div class="top-line"></div>
+
+  <div class="login-layout">
+    <!-- Lado izquierdo -->
+    <section class="hero">
+      <h1 class="hero__title">OLIMPIADAS<br>DEPORTIVAS</h1>
+      <p class="hero__subtitle">Sistema de gestión y seguimiento deportivo</p>
+
+      <div class="hero__roles">
+        <span class="btn">ESTUDIANTE</span>
+        <span class="btn">PROFESOR</span>
+        <span class="btn">ADMINISTRATIVO</span>
+      </div>
+
+      <p class="hero__note">Acceso según rango administrativo y rol</p>
+    </section>
+
+    <!-- Formulario -->
+    <section class="login-card">
+      <h2 class="login-card__title">INICIAR SESIÓN</h2>
+
+      <form id="loginForm" novalidate>
+        <label for="usuario">Usuario</label>
+        <input type="text" id="usuario" autocomplete="username">
+
+        <label for="clave">Contraseña</label>
+        <input type="password" id="clave" autocomplete="current-password">
+
+        <span class="label">Selecciona tu rol</span>
+        <div class="roles" id="roles">
+          <button type="button" class="role role--active" data-rol="estudiante">Estudiante</button>
+          <button type="button" class="role" data-rol="profesor">Profesor</button>
+          <button type="button" class="role" data-rol="administrativo">Administrativo</button>
+        </div>
+
+        <button type="submit" class="login-btn">ENTRAR AL SISTEMA →</button>
+      </form>
+    </section>
+  </div>
+
+  <footer class="footer login-footer">OD Colegio &nbsp;•&nbsp; Página 1</footer>
+
+  <script src="js/login.js"></script>
+</body>
+</html>

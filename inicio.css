@@ -1,0 +1,95 @@
+/* =========================================================
+   Página: Inicio (panorama de torneos)
+   ========================================================= */
+:root { --sidebar-w: 240px; --radio: 24px; }
+
+.layout { display: flex; min-height: 100vh; }
+
+/* ---------- Menú lateral ---------- */
+.sidebar {
+  width: var(--sidebar-w);
+  flex-shrink: 0;
+  background: var(--gris-oscuro);
+  padding: 32px 20px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+.logo {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--dorado);
+  margin-bottom: 36px;
+}
+.menu { display: flex; flex-direction: column; gap: 14px; }
+.menu__link {
+  display: block;
+  text-align: center;
+  padding: 13px 10px;
+  border-radius: 10px;
+  background: var(--gris-boton);
+  color: var(--crema);
+  font-weight: 700;
+  font-size: .95rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, .45);
+  transition: background .2s, transform .15s;
+}
+.menu__link:hover { background: var(--gris-borde); transform: translateY(-2px); }
+.menu__link--active,
+.menu__link--active:hover { background: var(--dorado); color: var(--negro); }
+
+/* ---------- Contenido ---------- */
+.main { flex: 1; padding: 32px 48px; display: flex; flex-direction: column; }
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.title { font-size: 2.2rem; font-weight: 800; color: var(--dorado); }
+.subtitle { margin-top: 8px; }
+.topbar__actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+/* ---------- Tarjetas ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 32px;
+  max-width: 900px;
+}
+.card {
+  border-radius: var(--radio);
+  padding: 26px 24px;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, .5);
+  transition: transform .2s, box-shadow .2s;
+}
+.card:hover { transform: translateY(-5px); box-shadow: 0 12px 22px rgba(0, 0, 0, .6); }
+.card--cream { background: var(--crema); }
+.card--white { background: var(--blanco); }
+.card__title { font-size: 1.4rem; font-weight: 800; color: var(--negro); }
+.card__status {
+  margin-top: auto;
+  font-size: .8rem;
+  font-weight: 800;
+  letter-spacing: .5px;
+  color: var(--dorado);
+}
+.card__link { font-size: .95rem; color: var(--gris-boton); }
+.card__link span { margin-left: 4px; transition: margin .2s; }
+.card__link:hover span { margin-left: 10px; }
+
+@media (max-width: 800px) {
+  .layout { flex-direction: column; }
+  .sidebar { width: 100%; height: auto; position: static; padding: 20px; }
+  .menu { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+  .main { padding: 24px 20px; }
+  .title { font-size: 1.6rem; }
+}

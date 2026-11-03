@@ -1,0 +1,63 @@
+/* =========================================================
+   Página: Perfil administrativo
+   ========================================================= */
+.page { max-width: 1100px; margin: 0 auto; padding: 32px 40px; min-height: 100vh; display: flex; flex-direction: column; }
+
+.topbar { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; flex-wrap: wrap; margin-bottom: 28px; }
+.title { font-size: 2.2rem; font-weight: 800; color: var(--dorado); }
+.title__line { width: 80px; height: 4px; background: var(--dorado); margin: 8px 0 14px; border-radius: 2px; }
+.topbar__actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+/* ---------- Tabla ---------- */
+.table-wrap { overflow-x: auto; }
+.table { width: 100%; border-collapse: collapse; text-align: center; color: var(--negro); }
+.table th {
+  background: var(--dorado);
+  padding: 18px 12px;
+  font-weight: 800;
+  border: 1px solid #fff;
+}
+.table td { padding: 22px 12px; border: 1px solid #fff; transition: background .2s; }
+.table tbody tr:nth-child(odd)  { background: var(--crema); }
+.table tbody tr:nth-child(even) { background: var(--blanco); }
+.table tbody tr.selected { outline: 3px solid var(--dorado); outline-offset: -3px; background: #f3e7b4; font-weight: 700; }
+
+/* ---------- Regla de acceso ---------- */
+.rule {
+  margin-top: 36px;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 32px 36px;
+  background: var(--gris-boton);
+  border: 1px solid var(--dorado);
+  border-radius: 20px;
+}
+.rule__title { color: var(--dorado); font-size: 1.2rem; font-weight: 800; white-space: nowrap; }
+.rule__text { color: #fff; line-height: 1.5; }
+
+/* ---------- Botones de rango ---------- */
+.ranks { display: flex; gap: 40px; margin-top: 16px; padding: 0 8px; flex-wrap: wrap; }
+.btn--lg { padding: 14px 34px; font-size: .85rem; }
+
+/* ---------- Parte inferior ---------- */
+.bottom { margin-top: auto; padding-top: 28px; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 12px; }
+.back {
+  padding: 12px 22px;
+  border: 1px solid var(--dorado);
+  border-radius: 8px;
+  background: var(--gris-boton);
+  color: var(--dorado);
+  font-weight: 700;
+  font-size: .85rem;
+  transition: background .2s, color .2s;
+}
+.back:hover { background: var(--dorado); color: var(--negro); }
+.bottom .footer { margin: 0; padding: 0; }
+
+@media (max-width: 700px) {
+  .page { padding: 20px; }
+  .title { font-size: 1.6rem; }
+  .rule { flex-direction: column; gap: 10px; padding: 22px; }
+  .ranks { gap: 12px; }
+}
